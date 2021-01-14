@@ -13,7 +13,9 @@ function App() {
     <div className="App">
       <p>Shoppies App</p>
       <SearchBox state={state} setState={setState}></SearchBox>
-      {state.searchValue !== "initial" && <p>Search value in state = {state.searchValue}</p>}
+      {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
+      {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>}
+      {state.resultsArray.length !== 0 && <p> api result = {state.resultsArray[0].Title}</p>}
     </div>
    
   );
