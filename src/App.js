@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
       <p>Shoppies App</p>
-      <SearchBox></SearchBox>
-      {state.searchValue === "initial" && <p>Search value in state = {state.searchValue}</p>}
+      <SearchBox state={state} setState={setState}></SearchBox>
+      {state.searchValue !== "initial" && <p>Search value in state = {state.searchValue}</p>}
     </div>
    
   );
