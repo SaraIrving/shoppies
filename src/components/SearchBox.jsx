@@ -15,6 +15,7 @@ export default function SearchBox(props) {
     console.log("IN submission handler")
     console.log(props.state.enteredValue)
     props.setState(prev => ({...prev, searchValue: props.state.enteredValue}))
+    
   };
 
   const handleKeyPress = (event) => {
