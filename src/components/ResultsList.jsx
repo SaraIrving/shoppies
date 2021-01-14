@@ -9,7 +9,7 @@ export default function(props) {
       {props.state.resultsArray !== 0 && <div>
       {props.state.resultsArray.map((movie, index) => {
         return(
-          <Movie movie={movie} key={index}></Movie>
+          <Movie movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Nominate"></Movie>
         );
       })}
     </div>}
