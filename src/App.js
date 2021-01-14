@@ -18,8 +18,8 @@ function App() {
       {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
       {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>}
       <div className="resultNomWrapper">
-        <ResultsList state={state}></ResultsList>
-        <NominationsList state={state}></NominationsList>
+        <ResultsList state={state} setState={setState}></ResultsList>
+        <NominationsList state={state} setState={setState}></NominationsList>
       </div>
     </div>
    
