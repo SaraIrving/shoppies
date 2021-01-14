@@ -7,7 +7,8 @@ export default function useAppData() {
   const [state, setState] = useState({
                                       enteredValue: 'initial',
                                       searchValue: '',
-                                      resultsArray: []
+                                      resultsArray: [],
+                                      nominationsArray: []
                                     });
 
   useEffect(() => {
