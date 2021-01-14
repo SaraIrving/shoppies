@@ -5,14 +5,16 @@ export default function SearchBox(props) {
 
   const changeHandler = (event) => {
     console.log("In change handler, event = ", event.target.value)
-    props.setState(prev => ({...prev, searchValue: event.target.value}))
+    props.setState(prev => ({...prev, enteredValue: event.target.value}))
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
     // trigger api call now with final product that is pulled out of state?
+    // alternately, now update a "final value" in the state which will trigger the api call so that the api is not firing for each change in character as the user types in the word
     console.log("IN submission handler")
-    console.log(props.state.searchValue)
+    console.log(props.state.enteredValue)
+    props.setState(prev => ({...prev, searchValue: props.state.enteredValue}))
   };
 
   const handleKeyPress = (event) => {
