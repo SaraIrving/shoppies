@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import SearchBox from './components/SearchBox';
 import useAppData from './hooks/useAppData';
+import ResultsList from './components/ResultsList';
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
       <SearchBox state={state} setState={setState}></SearchBox>
       {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
       {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>}
-      {state.resultsArray.length !== 0 && <p> api result = {state.resultsArray[0].Title}</p>}
+      {state.resultsArray.length !== 0 && <ResultsList state={state}></ResultsList>}
+
     </div>
    
   );
