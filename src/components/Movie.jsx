@@ -13,8 +13,8 @@ export default function Movie(props) {
 
   return (
     <div>
-      <p>props.Title</p>
-      <p>props.Year</p>
+      <p>{props.movie.Title}</p>
+      <p>{props.movie.Year}</p>
       <Button buttonLabel="Nominate"></Button>
     </div>
   );
