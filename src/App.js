@@ -17,8 +17,10 @@ function App() {
       <SearchBox state={state} setState={setState}></SearchBox>
       {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
       {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>}
-      <ResultsList state={state}></ResultsList>
-      <NominationsList state={state}></NominationsList>
+      <div className="resultNomWrapper">
+        <ResultsList state={state}></ResultsList>
+        <NominationsList state={state}></NominationsList>
+      </div>
     </div>
    
   );
