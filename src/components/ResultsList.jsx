@@ -5,13 +5,16 @@ export default function(props) {
 
 
   return (
-    <div>
+    <div className="resultsList">
+      {props.state.resultsArray !== 0 && <div>
       {props.state.resultsArray.map((movie, index) => {
         return(
           <Movie movie={movie} key={index}></Movie>
         );
       })}
-    </div>
+    </div>}
+    </div> 
+  
   );
 
 }
