@@ -13,8 +13,14 @@ export default function SearchBox(props) {
     // trigger api call now with final product that is pulled out of state?
     console.log("IN submission handler")
     console.log(props.state.searchValue)
-  }
+  };
 
+  const handleKeyPress = (event) => {
+     //it triggers by pressing the enter key
+     if (event.keyCode === 13) {
+      submitHandler();
+    }
+  };
 
   return (
 
@@ -22,11 +28,9 @@ export default function SearchBox(props) {
       <p>This is the search box</p>
       <form onSubmit={submitHandler}>
         <label></label>
-        <textarea name="searchBox" type="text" onChange={changeHandler}></textarea>
-        <button type="submit">Search</button>
+        <input name="searchBox" placeholder="Movie to search..." type="text" onChange={changeHandler} onKeyPress={handleKeyPress}></input>
+        {/* <button type="submit">Search</button> */}
       </form>
-    
-
     </div>
   )
 
