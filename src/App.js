@@ -3,6 +3,7 @@ import './App.css';
 import SearchBox from './components/SearchBox';
 import useAppData from './hooks/useAppData';
 import ResultsList from './components/ResultsList';
+import NominationsList from './components/NominationsList';
 
 function App() {
 
@@ -16,8 +17,8 @@ function App() {
       <SearchBox state={state} setState={setState}></SearchBox>
       {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
       {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>}
-      {state.resultsArray.length !== 0 && <ResultsList state={state}></ResultsList>}
-
+      <ResultsList state={state}></ResultsList>
+      <NominationsList state={state}></NominationsList>
     </div>
    
   );
