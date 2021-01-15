@@ -11,8 +11,13 @@ export default function NominationsList(props) {
         // remove the movie in question from the nominations array
         
         props.setState(prev => {
-          const nomCopy = prev.nominationsArray
+          
+          const nomCopy = prev.nominationsArray.slice(0)
+          nomCopy.map(each => console.log("before-", each.title))
+          console.log("NOM COPY BEFORE = ", nomCopy.length);
           nomCopy.splice(key, 1);
+          console.log("NOM COPY AFTER = ", nomCopy.length);
+          nomCopy.map(each => console.log("after -", each.title))
           return(
             {...prev, nominationsArray: nomCopy}
           )
