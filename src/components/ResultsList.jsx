@@ -27,9 +27,9 @@ export default function(props) {
 
         // if a result is already in the nominations list, don't give it a Nominate button
         const determineButtonDisable = function(nomArray) {
-          // if(nomArray.length >= 5) {
-          //   return true;
-          // }
+          if(nomArray.length >= 5) {
+            return true;
+          }
 
           for (let nom of nomArray) {
             if (nom.imdbID === movieObj.imdbID){
