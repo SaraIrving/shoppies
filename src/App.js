@@ -15,8 +15,9 @@ function App() {
     <div className="App">
       <p>Shoppies App</p>
       <SearchBox state={state} setState={setState}></SearchBox>
-      {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
-      {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>}
+      {/* {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
+      {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>} */}
+      {state.nominationsArray.length >= 5 && <p>NOminations list is full! Remove some if you want to nominate more</p>}
       <div className="resultNomWrapper">
         <ResultsList state={state} setState={setState}></ResultsList>
         <NominationsList state={state} setState={setState}></NominationsList>
