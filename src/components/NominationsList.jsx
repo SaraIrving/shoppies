@@ -26,7 +26,7 @@ export default function NominationsList(props) {
       {props.state.nominationsArray.length !== 0 && <div>
         {props.state.nominationsArray.map((movie, index) => {
           return (
-            <Movie movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Remove" submitHandler={getNomSubmitHandler(index)}></Movie>
+            <Movie disable={false} movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Remove" submitHandler={getNomSubmitHandler(index)}></Movie>
           );
         })}
       </div>}
