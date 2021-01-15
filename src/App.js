@@ -4,6 +4,7 @@ import SearchBox from './components/SearchBox';
 import useAppData from './hooks/useAppData';
 import ResultsList from './components/ResultsList';
 import NominationsList from './components/NominationsList';
+import Bounce from 'react-reveal/Bounce';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <SearchBox state={state} setState={setState}></SearchBox>
       {/* {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
       {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>} */}
-      {state.nominationsArray.length >= 5 && <p>NOminations list is full! Remove some if you want to nominate more</p>}
+      {state.nominationsArray.length >= 5 && <Bounce><p>NOminations list is full! Remove some if you want to nominate more</p></Bounce>}
       <div className="resultNomWrapper">
         <ResultsList state={state} setState={setState}></ResultsList>
         <NominationsList state={state} setState={setState}></NominationsList>
