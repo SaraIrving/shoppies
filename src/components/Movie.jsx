@@ -11,15 +11,22 @@ export default function Movie(props) {
   // imdbID: "tt1568911"}
 
 
+
   return (
     <div>
-      <p>{props.movie.title}</p>
-      <p>{props.movie.year}</p>
-      <form onSubmit={props.submitHandler}>
-        <Button buttonLabel={props.buttonLabel}></Button>
-       
-      </form>
+      {props.disable === true &&  <div>
+                                        <p>{props.movie.title}</p>
+                                        <p>{props.movie.year}</p>
+                                      </div>}
+      {props.disable === false && <div>
+                                    <p>{props.movie.title}</p>
+                                    <p>{props.movie.year}</p>
+                                    <form onSubmit={props.submitHandler}>
+                                      <Button buttonLabel={props.buttonLabel}></Button>
+                                    </form>
+                                  </div>}
     </div>
+ 
   );
 
 }
