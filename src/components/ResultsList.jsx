@@ -21,14 +21,18 @@ export default function(props) {
       {props.state.resultsArray.map((movie, index) => {
         const movieObj = {
                         title: movie.Title,
-                        year: movie.Year
+                        year: movie.Year,
+                        imdbID: movie.imdbID
                         };
 
         // if a result is already in the nominations list, don't give it a Nominate button
         const determineButtonDisable = function(nomArray) {
-        
+          // if(nomArray.length >= 5) {
+          //   return true;
+          // }
+
           for (let nom of nomArray) {
-            if (nom.title === movieObj.title){
+            if (nom.imdbID === movieObj.imdbID){
               return true;
             } 
           }
