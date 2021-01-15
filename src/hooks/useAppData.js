@@ -8,7 +8,8 @@ export default function useAppData() {
                                       enteredValue: 'initial',
                                       searchValue: '',
                                       resultsArray: [],
-                                      nominationsArray: []
+                                      nominationsArray: [],
+                                      enableDragDrop: false
                                     });
 
   useEffect(() => {
