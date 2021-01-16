@@ -16,6 +16,13 @@ function App() {
     <div className="App">
       <p>Shoppies App</p>
       <SearchBox state={state} setState={setState}></SearchBox>
+      <div>
+        <label>Enable Drag and drop feature to rank nominees
+        </label>
+        <input type="radio" value="DNDRadio" checked={state.enableDragDrop} value="DND" onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
+
+      </div>
+      
       {/* {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
       {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>} */}
       {state.nominationsArray.length >= 5 && <Bounce><p>NOminations list is full! Remove some if you want to nominate more</p></Bounce>}
