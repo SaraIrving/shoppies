@@ -13,6 +13,39 @@ function App() {
 
   console.log("state = ", state);
 
+  const handleOnDragEnd = function(result) {
+    //if you try to drag an element outside of the DragDropContext
+    if(!result.destination) {
+      return;
+    }
+
+    // if you are drag and dropping within the results list
+    if (result.destination.droppableId === "results" && result.source.droppableId === "results") {
+      const items = Array.from(state.resultsArray);
+      const [reorderedItem] = items.splice(result.source.index, 1);
+      items.splice(result.destination.index, 0, reorderedItem);
+      setState(prev => {return {...prev, resultsArray: items}})
+
+    // if you are drag and dropping within the nominations list
+    } else if (result.destination.droppableId === "nominations" && result.source.droppableId === "nominations") {
+      const items = Array.from(state.nominationsArray);
+      const [reorderedItem] = items.splice(result.source.index, 1);
+      items.splice(result.destination.index, 0, reorderedItem);
+      setState(prev => {return {...prev, nominationsArray: items}})
+
+    // if you are drag and dropping from results to nominations
+    } else if (result.destination.droppableId !== result.source.droppableId) {
+      console.log("you're switching LISTS!!")
+      if (result.destination.droppableId === "nominations") {
+        const items = Array.from(state.nominationsArray);
+        const [reorderedItem] = state.resultsArray.splice(result.source.index, 1);
+        items.splice(result.destination.index, 0, reorderedItem)
+        setState(prev => {return {...prev, nominationsArray: items}})
+      }
+    }
+
+  };
+
   return (
     <div className="App">
       <p>Shoppies App</p>
@@ -32,7 +65,7 @@ function App() {
                                   <ResultsList state={state} setState={setState}></ResultsList>
                                   <NominationsList state={state} setState={setState}></NominationsList>
                                 </div>}
-      {state.enableDragDrop && <DragDropContext>
+      {state.enableDragDrop && <DragDropContext onDragEnd={handleOnDragEnd}>
                                   <p>drag and drop happening</p>
                                   <div className="resultNomWrapper">
                                     <ResultsList state={state} setState={setState} droppableId="results" listItemType="results"></ResultsList>
