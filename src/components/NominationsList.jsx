@@ -1,5 +1,6 @@
 import React from 'react';
 import Movie from './Movie';
+import { Droppable } from "react-beautiful-dnd";
 
 export default function NominationsList(props) {
 
@@ -28,13 +29,26 @@ export default function NominationsList(props) {
 
   return (
     <div className="nominationsList">
-      {props.state.nominationsArray.length !== 0 && <div>
-        {props.state.nominationsArray.map((movie, index) => {
-          return (
-            <Movie disable={false} movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Remove" submitHandler={getNomSubmitHandler(index)}></Movie>
-          );
-        })}
-      </div>}
+      {(props.state.nominationsArray.length !== 0 && props.state.enableDragDrop) && <Droppable droppableId={props.droppableId}>
+        {(provided) => (
+          <div  {...provided.droppableProps} ref={provided.innerRef}>
+          {props.state.nominationsArray.map((movie, index) => {
+            return (
+              <Movie listItemType={props.listItemType} draggableId={movie.title} disable={false} movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Remove" submitHandler={getNomSubmitHandler(index)}></Movie>
+            );
+          })}
+          {provided.placeholder}
+        </div>
+
+        )}
+        </Droppable>}
+        {(props.state.nominationsArray.length !== 0 && !props.state.enableDragDrop) && <div>
+          {props.state.nominationsArray.map((movie, index) => {
+            return (
+              <Movie disable={false} movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Remove" submitHandler={getNomSubmitHandler(index)}></Movie>
+            );
+          })}
+        </div>}
 
     </div>
  
