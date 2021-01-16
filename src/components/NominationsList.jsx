@@ -34,7 +34,7 @@ export default function NominationsList(props) {
           <div  {...provided.droppableProps} ref={provided.innerRef}>
           {props.state.nominationsArray.map((movie, index) => {
             return (
-              <Movie listItemType={props.listItemType} draggableId={movie.title} disable={false} movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Remove" submitHandler={getNomSubmitHandler(index)}></Movie>
+              <Movie listItemType={props.listItemType} draggableId={movie.title} index={index} disable={false} movie={movie} key={index} state={props.state} setState={props.setState} buttonLabel="Remove" submitHandler={getNomSubmitHandler(index)}></Movie>
             );
           })}
           {provided.placeholder}
