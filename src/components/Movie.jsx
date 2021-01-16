@@ -15,7 +15,7 @@ export default function Movie(props) {
 
   return (
     <div>
-      {props.state.enableDragDrop &&  <Draggable key={props.index} draggableId={props.draggableId} index={props.index}>
+      {props.state.enableDragDrop &&  <Draggable key={props.draggableId} draggableId={props.draggableId} index={props.index}>
         {(provided) => (
           <div {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
           {props.disable === true &&  <div>
