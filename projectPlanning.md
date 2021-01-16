@@ -25,13 +25,15 @@
   - https://medium.com/swlh/building-controlled-forms-using-functional-components-in-react-965d033a89bd
 * Form submit on pressing Enter key:
   - https://reactgo.com/react-trigger-button-click/
-* 
+* Building Radio Buttons
+  - http://react.tips/radio-buttons-in-reactjs/
 
 ## Components list
 * SearchBox
-  * AutocompleteBox
+  * AutocompleteBox?
 * ResultsBox
   * Movie
   * MovieList
-* NominationsList
-* Button 
+* NominationsList (will also hold movie components)
+* Button
+* NotificationBanner  
