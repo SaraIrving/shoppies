@@ -63,7 +63,7 @@ export default function(props) {
           const disableProp = determineButtonDisable(props.state.nominationsArray, movieObj);
   
           return(
-            <Movie index={index} listItemType={props.listItemType} draggableId={movie.title} disable={disableProp} movie={movieObj} key={index} state={props.state} setState={props.setState} buttonLabel="Nominate" submitHandler={getResultsSubmitHandler(movieObj)}></Movie>
+            <Movie index={index} listItemType={props.listItemType} draggableId={movieObj.title} disable={disableProp} movie={movieObj} key={index} state={props.state} setState={props.setState} buttonLabel="Nominate" submitHandler={getResultsSubmitHandler(movieObj)}></Movie>
           );
         })}
         {provided.placeholder}
