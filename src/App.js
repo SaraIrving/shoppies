@@ -87,7 +87,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header></Header>
+      <Header state={state}></Header>
       <body className="appBody">
         <SearchBox state={state} setState={setState}></SearchBox>
         <div className="radioWrapper">
