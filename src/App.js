@@ -84,12 +84,14 @@ function App() {
 
   return (
     <div className="App">
-      <Flash><p>The Shoppie Awards</p></Flash>
+      <Flash><p className="title">The Shoppie Awards</p></Flash>
       <SearchBox state={state} setState={setState}></SearchBox>
       <div className="radioWrapper">
-        <label>Enable Drag and drop feature to rank nominees
+        <input id="dndRadio" type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
+        <label for="dndRadio">
+          <span className="radioSpan">Enable Drag and drop feature to rank nominees</span>
         </label>
-        <input type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
+        
       </div>
       
       {/* {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
