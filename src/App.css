@@ -1,6 +1,76 @@
 .App {
   text-align: center;
+  margin: 1em;
+  padding: 1em;
+  border: 3px solid purple;
+  min-height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.title {
+  color: rgb(182, 3, 182);
+  font-weight: bolder;
+  font-size: xx-large;
+}
+
+.searchBox {
+  outline-color: rgb(182, 3, 182);
+  caret-color: rgb(182, 3, 182);
+  /* color: teal; */
+}
+
+.searchBox input {
+  color:rgb(182, 3, 182);
+  border: 3px solid purple;
+  border-radius: 10px;
+  background: transparent;
+  padding: 1em;
+  font-size: large;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+}
+
+.searchBox input:focus {
+  outline: none;
+}
+
+/* .searchBox input::placeholder {
+  color: teal
+} */
+
+.radioWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
+}
+
+.radioWrapper label span:hover {
+  cursor: pointer;
+}
+
+.radioWrapper input:hover {
+  cursor: pointer;
+}
+
+.radioWrapper input[type="radio"]:checked + label {
+  color:rgb(182, 3, 182);
+}
+/* Attempt custom styling of radio box */
+/* .radioWrapper span.radioSpan::before {
+  background-color: red;
+}
+
+.radioWrapper span.radioSpan::after {
+  background-color: yellow;
+}
+
+.radioWrapper input:checked + label span.radioSpan::after {
+  color: turquoise;
+  background-color: turquoise;
+} */
+
 
 .resultNomWrapper {
   display: flex;
@@ -9,13 +79,13 @@
 }
 
 .resultsList {
-  border: 3px solid blue;
+  border: 3px solid purple;
   width: 40%;
   min-height: 200px;
 }
 
 .nominationsList {
-  border: 3px solid fuchsia;
+  border: 3px solid purple;
   width: 40%;
   min-height: 200px;
 }
