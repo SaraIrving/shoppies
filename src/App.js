@@ -88,27 +88,28 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      {/* <Flash><p className="title">The Shoppie Awards</p></Flash> */}
-      <SearchBox state={state} setState={setState}></SearchBox>
-      <div className="radioWrapper">
-        <input id="dndRadio" type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
-        <label for="dndRadio">
-          <span className="radioSpan">Enable Drag and drop feature to rank movies in nominations list</span>
-        </label>
-      </div>
-      {state.nominationsArray.length >= 5 && <Alert></Alert>}
+      <body className="appBody">
+        <SearchBox state={state} setState={setState}></SearchBox>
+        <div className="radioWrapper">
+          <input id="dndRadio" type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
+          <label for="dndRadio">
+            <span className="radioSpan">Enable Drag and drop feature to rank movies in nominations list</span>
+          </label>
+        </div>
+        {state.nominationsArray.length >= 5 && <Alert></Alert>}
 
 
-      {!state.enableDragDrop && <div className="resultNomWrapper">
-                                  <ResultsList state={state} setState={setState}></ResultsList>
-                                  <NominationsList state={state} setState={setState}></NominationsList>
-                                </div>}
-      {state.enableDragDrop && <DragDropContext onDragEnd={handleOnDragEnd}>
-                                  <div className="resultNomWrapper">
-                                    <ResultsList state={state} setState={setState} droppableId="results" listItemType="results"></ResultsList>
-                                    <NominationsList state={state} setState={setState} droppableId="nominations" listItemType="nominations"></NominationsList>
-                                  </div>
-                                </DragDropContext>}
+        {!state.enableDragDrop && <div className="resultNomWrapper">
+                                    <ResultsList state={state} setState={setState}></ResultsList>
+                                    <NominationsList state={state} setState={setState}></NominationsList>
+                                  </div>}
+        {state.enableDragDrop && <DragDropContext onDragEnd={handleOnDragEnd}>
+                                    <div className="resultNomWrapper">
+                                      <ResultsList state={state} setState={setState} droppableId="results" listItemType="results"></ResultsList>
+                                      <NominationsList state={state} setState={setState} droppableId="nominations" listItemType="nominations"></NominationsList>
+                                    </div>
+                                  </DragDropContext>}
+    </body>
     <Footer></Footer>
     </div>
    
