@@ -24,6 +24,7 @@ export default function Movie(props) {
 
   const memeArray = [[drakeYes, "First! You know what that means..."], [successKid, "Second! We're almost the best!"], [cat, "Third! Not bad, but some mixed feelings."], [madLady, "Fourth!?! I'd like to speak to the manager!"], [drakeNo, "Fifth! Pshssh!"]];
 
+  console.log("MOVIE PROPS = ", props);
 
 
   return (
@@ -34,7 +35,7 @@ export default function Movie(props) {
           {props.disable === true &&  <div className="movieWrapper">
                                           <p>{props.movie.title} ({props.movie.year})</p>
                                           </div>}
-          {props.disable === false && <div className="movieWrapper">
+          {(props.disable === false && props.listItemType === "nominations") && <div className="movieWrapper">
                                         <div className="memeWrapper">
                                           <img src={memeArray[props.index][0]} className="memeImg"/>
                                           <p>{memeArray[props.index][1]}</p> 
@@ -47,6 +48,13 @@ export default function Movie(props) {
                                         </div>
                                       
                                       </div>}
+          {(props.disable === false && props.listItemType === "results") && <div className="movieWrapper">
+            <p>{props.movie.title} ({props.movie.year})</p>
+            <form onSubmit={props.submitHandler}>
+              <Button buttonLabel={props.buttonLabel} className={props.className}></Button>
+            </form>
+          
+          </div>}
       </div>
         )}
                                         
