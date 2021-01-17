@@ -33,7 +33,9 @@ export default function Movie(props) {
         {(provided) => (
           <div {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
           {props.disable === true &&  <div className="movieWrapper">
+                                        <div className="movieInfoWrapper"> 
                                           <p>{props.movie.title} ({props.movie.year})</p>
+                                        </div>
                                           </div>}
           {(props.disable === false && props.listItemType === "nominations") && <div className="movieWrapper">
                                         <div className="memeWrapper">
@@ -49,11 +51,12 @@ export default function Movie(props) {
                                       
                                       </div>}
           {(props.disable === false && props.listItemType === "results") && <div className="movieWrapper">
+          <div className="movieInfoWrapper">
             <p>{props.movie.title} ({props.movie.year})</p>
             <form onSubmit={props.submitHandler}>
               <Button buttonLabel={props.buttonLabel} className={props.className}></Button>
             </form>
-          
+          </div>
           </div>}
       </div>
         )}
@@ -61,13 +64,17 @@ export default function Movie(props) {
                                       </Draggable>}
       {!props.state.enableDragDrop && <div>
                                         {props.disable === true &&  <div className="movieWrapper">
+                                                                      <div className="movieInfoWrapper">
                                                                         <p>{props.movie.title} ({props.movie.year})</p>
+                                                                      </div>
                                                                         </div>}
                                         {props.disable === false && <div className="movieWrapper">
-                                                                      <p>{props.movie.title} ({props.movie.year})</p>
-                                                                      <form onSubmit={props.submitHandler}>
-                                                                        <Button buttonLabel={props.buttonLabel} className={props.className}></Button>
-                                                                      </form>
+                                                                      <div className="movieInfoWrapper">
+                                                                        <p>{props.movie.title} ({props.movie.year})</p>
+                                                                        <form onSubmit={props.submitHandler}>
+                                                                          <Button buttonLabel={props.buttonLabel} className={props.className}></Button>
+                                                                        </form>
+                                                                      </div>
                                                                     </div>}
                                         </div>}
  
