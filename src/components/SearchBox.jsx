@@ -28,11 +28,9 @@ export default function SearchBox(props) {
   return (
 
     <div className="searchBox">
-      <p>This is the search box</p>
       <form onSubmit={submitHandler}>
         <label></label>
         <input name="searchBox" placeholder="Movie to search..." type="text" onChange={changeHandler} onKeyPress={handleKeyPress}></input>
-        {/* <button type="submit">Search</button> */}
       </form>
     </div>
   )
