@@ -15,7 +15,7 @@ export default function SearchBox(props) {
     console.log("IN submission handler")
     console.log(props.state.enteredValue)
     props.setState(prev => ({...prev, searchValue: props.state.enteredValue}))
-    
+
   };
 
   const handleKeyPress = (event) => {
@@ -27,7 +27,7 @@ export default function SearchBox(props) {
 
   return (
 
-    <div>
+    <div className="searchBox">
       <p>This is the search box</p>
       <form onSubmit={submitHandler}>
         <label></label>
