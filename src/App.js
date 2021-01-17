@@ -3,6 +3,7 @@ import './App.css';
 import SearchBox from './components/SearchBox';
 import Alert from './components/Alert';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import useAppData from './hooks/useAppData';
 import ResultsList from './components/ResultsList';
 import NominationsList from './components/NominationsList';
@@ -108,6 +109,7 @@ function App() {
                                     <NominationsList state={state} setState={setState} droppableId="nominations" listItemType="nominations"></NominationsList>
                                   </div>
                                 </DragDropContext>}
+    <Footer></Footer>
     </div>
    
   );
