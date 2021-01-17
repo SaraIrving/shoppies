@@ -27,6 +27,10 @@
   - https://reactgo.com/react-trigger-button-click/
 * Building Radio Buttons
   - http://react.tips/radio-buttons-in-reactjs/
+* Styling input elements
+  - https://css-tricks.com/almanac/selectors/p/placeholder/
+  
+
 
 ## Components list
 * SearchBox
