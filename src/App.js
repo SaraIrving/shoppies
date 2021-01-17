@@ -89,14 +89,10 @@ function App() {
       <div className="radioWrapper">
         <input id="dndRadio" type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
         <label for="dndRadio">
-          <span className="radioSpan">Enable Drag and drop feature to rank nominees</span>
+          <span className="radioSpan">Enable Drag and drop feature to rank movies in nominations list</span>
         </label>
-        
       </div>
-      
-      {/* {state.enteredValue !== "initial" && <p>Search value in state = {state.enteredValue}</p>}
-      {state.searchValue !== "" && <p>Search value in state = {state.searchValue}</p>} */}
-      {state.nominationsArray.length >= 5 && <Bounce><p>NOminations list is full! Remove some if you want to nominate more</p></Bounce>}
+      {state.nominationsArray.length >= 5 && <Bounce><p>Nominations list is full! Remove some movies if you want to nominate more</p></Bounce>}
 
 
       {!state.enableDragDrop && <div className="resultNomWrapper">
@@ -104,7 +100,6 @@ function App() {
                                   <NominationsList state={state} setState={setState}></NominationsList>
                                 </div>}
       {state.enableDragDrop && <DragDropContext onDragEnd={handleOnDragEnd}>
-                                  <p>drag and drop happening</p>
                                   <div className="resultNomWrapper">
                                     <ResultsList state={state} setState={setState} droppableId="results" listItemType="results"></ResultsList>
                                     <NominationsList state={state} setState={setState} droppableId="nominations" listItemType="nominations"></NominationsList>
