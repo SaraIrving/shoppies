@@ -88,7 +88,7 @@ function App() {
   return (
     <div className="App">
       <Header state={state}></Header>
-      <body className="appBody">
+      <div className="appBody">
         <SearchBox state={state} setState={setState}></SearchBox>
         <div className="radioWrapper">
           <input id="dndRadio" type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
@@ -109,7 +109,7 @@ function App() {
                                       <NominationsList state={state} setState={setState} droppableId="nominations" listItemType="nominations"></NominationsList>
                                     </div>
                                   </DragDropContext>}
-    </body>
+    </div>
     <Footer></Footer>
     </div>
    
