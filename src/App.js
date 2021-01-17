@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import SearchBox from './components/SearchBox';
+import Alert from './components/Alert';
 import useAppData from './hooks/useAppData';
 import ResultsList from './components/ResultsList';
 import NominationsList from './components/NominationsList';
@@ -92,7 +93,7 @@ function App() {
           <span className="radioSpan">Enable Drag and drop feature to rank movies in nominations list</span>
         </label>
       </div>
-      {state.nominationsArray.length >= 5 && <Bounce><p>Nominations list is full! Remove some movies if you want to nominate more</p></Bounce>}
+      {state.nominationsArray.length >= 5 && <Alert></Alert>}
 
 
       {!state.enableDragDrop && <div className="resultNomWrapper">
