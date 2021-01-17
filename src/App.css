@@ -14,6 +14,14 @@
   font-size: xx-large;
 }
 
+/* Styling for Alert component */
+.alert {
+  display: flex;
+  font-size: large;
+  font-weight: bolder;
+  color:rgb(182, 3, 182);
+}
+
 /* Styling for movie search box */
 .searchBox {
   outline-color: rgb(182, 3, 182);
