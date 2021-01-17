@@ -25,10 +25,17 @@
   - https://medium.com/swlh/building-controlled-forms-using-functional-components-in-react-965d033a89bd
 * Form submit on pressing Enter key:
   - https://reactgo.com/react-trigger-button-click/
-* Building Radio Buttons
+* Building and Styling Radio Buttons
   - http://react.tips/radio-buttons-in-reactjs/
+  - https://stackoverflow.com/questions/4641752/css-how-to-style-a-selected-radio-buttons-label
+  - 
 * Styling input elements
   - https://css-tricks.com/almanac/selectors/p/placeholder/
+  - https://www.w3docs.com/snippets/css/how-to-remove-and-style-the-border-outline-around-text-input-boxes-in-google-chrome.html
+* Adding images in React (not in the Public folder)
+  - https://create-react-app.dev/docs/using-the-public-folder/
+* Fun meme images
+  - https://www.stickpng.com/
   
 
 
