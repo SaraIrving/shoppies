@@ -1,10 +1,20 @@
 .App {
   text-align: center;
-  margin: 1em;
-  padding: 1em;
-  border: 3px solid purple;
+  /* margin: 1em; */
+  /* padding: 1em; */
+  /* border: 3px solid purple; */
   min-height: 100vh;
+  /* width: 100vh; */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+header {
+  background-color: black;
+  color: white;
 }
 
 /* App main title */
@@ -76,12 +86,15 @@
   border: 3px solid purple;
   width: 40%;
   min-height: 200px;
+  min-width: 12em;
+  margin-right: 3em;
 }
 
 .nominationsList {
   border: 3px solid purple;
   width: 40%;
   min-height: 200px;
+  min-width: 12em;
 }
 
 #nomListDnd {
@@ -125,8 +138,8 @@
 }
 
 .memeImg {
-  height: 4em;
-  width: 4em;
+  max-height: 4em;
+  max-width: 4em;
 }
 
 .movieInfoWrapper {
