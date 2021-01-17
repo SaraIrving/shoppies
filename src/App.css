@@ -7,12 +7,14 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/* App main title */
 .title {
   color: rgb(182, 3, 182);
   font-weight: bolder;
   font-size: xx-large;
 }
 
+/* Styling for movie search box */
 .searchBox {
   outline-color: rgb(182, 3, 182);
   caret-color: rgb(182, 3, 182);
@@ -36,10 +38,7 @@
   outline: none;
 }
 
-/* .searchBox input::placeholder {
-  color: teal
-} */
-
+/* Styling for radio button */
 .radioWrapper {
   display: flex;
   justify-content: center;
@@ -57,21 +56,8 @@
 .radioWrapper input[type="radio"]:checked + label {
   color:rgb(182, 3, 182);
 }
-/* Attempt custom styling of radio box */
-/* .radioWrapper span.radioSpan::before {
-  background-color: red;
-}
 
-.radioWrapper span.radioSpan::after {
-  background-color: yellow;
-}
-
-.radioWrapper input:checked + label span.radioSpan::after {
-  color: turquoise;
-  background-color: turquoise;
-} */
-
-
+/* styling for results list and nominations list boxes */
 .resultNomWrapper {
   display: flex;
   justify-content: space-between;
@@ -88,4 +74,57 @@
   border: 3px solid purple;
   width: 40%;
   min-height: 200px;
+}
+
+#nomListDnd {
+  border-color:rgb(182, 3, 182);
+  background-color:yellow
+}
+
+
+/* Button component styling */
+.nomButton, .resultButton {
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  background-color: teal;
+  color: white;
+  text-align: center;
+  padding: 0.25em;
+}
+
+
+
+/* Styling for movie components */
+.movieWrapper {
+  border: 3px solid teal;
+  border-radius: 5px;
+  margin: 1em;
+  /* padding: 0.5em; */
+  /* min-height: 3em; */
+}
+
+.memeWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.memeImg {
+  height: 4em;
+  width: 4em;
+}
+
+.movieInfoWrapper {
+  padding: 0.5em;
+}
+
+.movieInfoWrapper p {
+  font-weight: bolder;
 }
