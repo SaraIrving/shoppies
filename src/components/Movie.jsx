@@ -22,7 +22,7 @@ export default function Movie(props) {
     }
   }
 
-  const memeArray = [[drakeYes, "First! You know what that means..."], [successKid, "Second! We're almost the best!"], [cat, "Third! Not bad, but some mixed feelings."], [madLady, "Fourth!?! I'd like to speak to the manager!"], [drakeNo, "Fifth! Pshssh!"]];
+  const memeArray = [[drakeYes, "First! That hotline will be blinging!"], [successKid, "Second! We're almost the best!"], [cat, "Third! Not bad, but some mixed feelings."], [madLady, "Fourth!?! I'd like to speak to the manager!"], [drakeNo, "Fifth! Pshssh!"]];
 
   console.log("MOVIE PROPS = ", props);
 
