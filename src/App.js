@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import SearchBox from './components/SearchBox';
 import Alert from './components/Alert';
+import Header from './components/Header';
 import useAppData from './hooks/useAppData';
 import ResultsList from './components/ResultsList';
 import NominationsList from './components/NominationsList';
@@ -85,7 +86,8 @@ function App() {
 
   return (
     <div className="App">
-      <Flash><p className="title">The Shoppie Awards</p></Flash>
+      <Header></Header>
+      {/* <Flash><p className="title">The Shoppie Awards</p></Flash> */}
       <SearchBox state={state} setState={setState}></SearchBox>
       <div className="radioWrapper">
         <input id="dndRadio" type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
