@@ -50,6 +50,7 @@ footer {
   font-size: large;
   font-weight: bolder;
   color:rgb(182, 3, 182);
+  padding: 1em;
 }
 
 /* Styling for movie search box */
