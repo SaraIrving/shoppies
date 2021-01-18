@@ -96,7 +96,7 @@ function App() {
             <span className="radioSpan">Enable "meme free" mode for a boring by the specifications app</span>
           </label>
         </div>
-        {state.nominationsArray.length >= 5 && <Alert></Alert>}
+        {state.nominationsArray.length >= 5 && <Alert state={state}></Alert>}
 
 
         {!state.enableDragDrop && <div className="resultNomWrapper">
