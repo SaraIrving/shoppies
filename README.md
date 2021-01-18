@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Shoppies Awards App
+The Shoppies Awards app allows cinema savvy users to search for their favorite movies, nominate them for a Shoppie award and manage their nominations list. It was bootstrapped with creat-react-app. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Requirements
+- Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
+- Each search result should list at least its title, year of release and a button to nominate that film.
+- Updates to the search terms should update the result list
+- Movies in search results can be added and removed from the nomination list.
+- If a search result has already been nominated, disable its nominate button.
+- Display a banner when the user has 5 nominations.
 
-## Available Scripts
+## Stretch Features
+- Toggle between "modes", there is a "meme free" mode which is simple and showcases the basic project requirements but there is also a more whimsical default mode which allows the user to drag and drop their nominees to reorder then and uses comical memes wherever possible to add some fun to the experience. The drag and drop capabilities were added via react-beautiful-dnd. 
+- I leveraged the react reveal library to add some animations to the app's Header and Alert components 
 
-In the project directory, you can run:
+## Screenshots
+### Toggle Between Basic Mode and Meme Mode!
+!["modes"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/modeToggle.png)
 
-### `yarn start`
+### Different Memes For Each Nominee 
+!["Memes!"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/memes.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Nominate Buttons Are Disabled Once A Title Is Nominated
+!["Nominate!"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/disableNominate.png
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Alert Once Five Titles Have Been Nominated
+!["Alert!"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/alert.png)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
+- Run `npm install` or `yarn` to install the dependencies. Then run `npm start` or `yarn start`, and go to `localhost:3000` in your browser.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Dependencies
+  - testing-library/jest-dom: ^5.11.4
+  - testing-library/react: ^11.1.0
+  - testing-library/user-event: ^12.1.10
+  - axios: ^0.21.1
+  - react: ^17.0.1
+  - react-beautiful-dn: "^13.0.0
+  - react-dom: ^17.0.1
+  - react-reveal: ^1.2.2
+  - react-scripts: 4.0.1
+  - web-vitals": 0.2.
