@@ -111,9 +111,10 @@ footer {
   width: 40%;
   min-height: 200px;
   min-width: 12em;
+  background-color:rgb(255, 242, 255)
   /* margin-right: 3em; */
-  background-color: #cccccc;
-background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  /* background-color: #cccccc;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
 }
 
 .nominationsList {
@@ -121,8 +122,9 @@ background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png
   width: 40%;
   min-height: 200px;
   min-width: 12em;
-  background-color: #c9a208;
-background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  background-color:rgb(255, 242, 255)
+  /* background-color: #c9a208;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
 }
 
 #nomListDnd {
@@ -137,6 +139,21 @@ background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png
   color: white;
   font-weight: bolder;
 }
+
+h2 {
+  color:rgb(182, 3, 182);
+}
+
+/* .titleListWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleListWrapper h2 {
+  color:rgb(182, 3, 182);
+} */
 
 /* Button component styling */
 .nomButton, .resultButton {
