@@ -99,6 +99,7 @@ footer {
 }
 
 /* styling for results list and nominations list boxes */
+
 .resultNomWrapper {
   display: flex;
   justify-content: space-between;
@@ -110,7 +111,7 @@ footer {
   width: 40%;
   min-height: 200px;
   min-width: 12em;
-  margin-right: 3em;
+  /* margin-right: 3em; */
 }
 
 .nominationsList {
@@ -125,6 +126,13 @@ footer {
   background-color:yellow
 }
 
+.resultsInstructions, .nomsInstructions {
+  background-color:rgb(182, 3, 182);
+  margin-top: auto;
+  padding: 0.5em;
+  color: white;
+  font-weight: bolder;
+}
 
 /* Button component styling */
 .nomButton, .resultButton {
