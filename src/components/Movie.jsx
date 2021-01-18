@@ -9,23 +9,7 @@ import successKid from '../images/successKid.png';
 
 export default function Movie(props) {
 
-  // expected structure of object in results array:
-  // { Poster: "https://m.media-amazon.com/images/M/MV5BMjExNzkxOTYyNl5BMl5BanBnXkFtZTcwODA0MjU4Ng@@._V1_SX300.jpg"
-  // Title: "War Horse"
-  // Type: "movie"
-  // Year: "2011"
-  // imdbID: "tt1568911"}
-
-  const determineImage = function(index) {
-    if(index === 0) {
-      return 
-    }
-  }
-
   const memeArray = [[drakeYes, "First! That hotline will be blinging!"], [successKid, "Second! We're almost the best!"], [cat, "Third! Not bad, but some mixed feelings."], [madLady, "Fourth!?! I'd like to speak to the manager!"], [drakeNo, "Fifth! Pshssh!"]];
-
-  console.log("MOVIE PROPS = ", props);
-
 
   return (
     <div>

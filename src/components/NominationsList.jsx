@@ -5,7 +5,6 @@ import { Droppable } from "react-beautiful-dnd";
 export default function NominationsList(props) {
 
   // submission handler for the form in the Movie component
-
   const getNomSubmitHandler = function(key){
     return ((event) => {
         event.preventDefault();
@@ -15,9 +14,9 @@ export default function NominationsList(props) {
           
           const nomCopy = prev.nominationsArray.slice(0)
           nomCopy.map(each => console.log("before-", each.title))
-          console.log("NOM COPY BEFORE = ", nomCopy.length);
+          
           nomCopy.splice(key, 1);
-          console.log("NOM COPY AFTER = ", nomCopy.length);
+          
           nomCopy.map(each => console.log("after -", each.title))
           return(
             {...prev, nominationsArray: nomCopy}
@@ -25,7 +24,7 @@ export default function NominationsList(props) {
         })
       }
     )
-  }
+  };
 
   return (
     <div className="nominationsList">

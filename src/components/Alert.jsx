@@ -14,10 +14,6 @@ export default function Alert (props) {
         </p>
         {props.state.enableDragDrop && <img src={grumpyCat} className="memeImg"/>}
       </div>
-      
     </Bounce>
-
-
-
   );
 }

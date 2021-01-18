@@ -1,5 +1,4 @@
 import React from 'react';
-import { Droppable } from 'react-beautiful-dnd';
 import Movie from './Movie';
 
 export default function(props) {
@@ -51,33 +50,6 @@ export default function(props) {
       })}
     </div>}
 
-
-    {/* {(props.state.resultsArray !== 0 && props.state.enableDragDrop) && <Droppable droppableId={props.droppableId}>
-      {(provided) => (
-        <div {...provided.droppableProps} ref={provided.innerRef}>
-        {props.state.resultsArray.map((movie, index) => {
-          const movieObj = {
-                          title: movie.Title,
-                          year: movie.Year,
-                          imdbID: movie.imdbID
-                          };
-  
-          const disableProp = determineButtonDisable(props.state.nominationsArray, movieObj);
-  
-          return(
-            <Movie index={index} listItemType={props.listItemType} draggableId={movieObj.title + props.listItemType} disable={disableProp} movie={movieObj} key={index} state={props.state} setState={props.setState} buttonLabel="Nominate" submitHandler={getResultsSubmitHandler(movieObj)} className="resultButton"></Movie>
-          );
-        })}
-        {provided.placeholder}
-      </div>
-
-      )}
-      
-      </Droppable>} */}
-
     </div> 
-    
-  
   );
-
 }
