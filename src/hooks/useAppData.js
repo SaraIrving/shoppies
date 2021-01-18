@@ -13,7 +13,7 @@ export default function useAppData() {
                                     });
 
   useEffect(() => {
-    axios.get(`http://www.omdbapi.com/?apikey=bb6449b7&type=movie&s=${state.searchValue}`)
+    axios.get(`https://www.omdbapi.com/?apikey=bb6449b7&type=movie&s=${state.searchValue}`)
     .then((response) => {
       console.log("response.data  = ", response.data.Search)
       //now use the data to set the results list in the state!
