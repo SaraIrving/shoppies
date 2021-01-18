@@ -29,7 +29,9 @@ export default function NominationsList(props) {
 
   return (
     <div className="nominationsList">
-      {(props.state.nominationsArray.length !== 0 && props.state.enableDragDrop) && <Droppable droppableId={props.droppableId} id="nomListDnd">
+        {props.state.enableDragDrop && <p className="nomsInstructions">Drag and drop the nominees to reorder their ranking. Click "Remove" to bump them out of the running!</p>}
+        {!props.state.enableDragDrop && <p className="nomsInstructions">Click "Remove" to bump a nominee out of the running!</p>}
+        {(props.state.nominationsArray.length !== 0 && props.state.enableDragDrop) && <Droppable droppableId={props.droppableId} id="nomListDnd">
         {(provided) => (
           <div  {...provided.droppableProps} ref={provided.innerRef}>
             {console.log("State in NOM LIST = ", props.state.nominationsArray)}
@@ -52,7 +54,5 @@ export default function NominationsList(props) {
         </div>}
 
     </div>
- 
-
   );
 }
