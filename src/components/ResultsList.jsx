@@ -34,7 +34,7 @@ export default function(props) {
   return (
     <div className="resultsList">
       <p className="resultsInstructions">Click "Nominate" to add a movie to the list of contenders for a Shoppie Award!</p>
-      {(props.state.resultsArray !== 0 && !props.state.enableDragDrop) && <div>
+      {(props.state.resultsArray !== 0) && <div>
       {props.state.resultsArray.map((movie, index) => {
         const movieObj = {
                         title: movie.Title,
@@ -45,13 +45,13 @@ export default function(props) {
         const disableProp = determineButtonDisable(props.state.nominationsArray, movieObj);
 
         return(
-          <Movie disable={disableProp} movie={movieObj} key={index} state={props.state} setState={props.setState} buttonLabel="Nominate" submitHandler={getResultsSubmitHandler(movieObj)} className="resultButton"></Movie>
+          <Movie source="results" disable={disableProp} movie={movieObj} key={index} state={props.state} setState={props.setState} buttonLabel="Nominate" submitHandler={getResultsSubmitHandler(movieObj)} className="resultButton"></Movie>
         );
       })}
     </div>}
 
 
-    {(props.state.resultsArray !== 0 && props.state.enableDragDrop) && <Droppable droppableId={props.droppableId}>
+    {/* {(props.state.resultsArray !== 0 && props.state.enableDragDrop) && <Droppable droppableId={props.droppableId}>
       {(provided) => (
         <div {...provided.droppableProps} ref={provided.innerRef}>
         {props.state.resultsArray.map((movie, index) => {
@@ -72,7 +72,7 @@ export default function(props) {
 
       )}
       
-      </Droppable>}
+      </Droppable>} */}
 
     </div> 
     
