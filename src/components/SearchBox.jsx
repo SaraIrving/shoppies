@@ -20,6 +20,7 @@ export default function SearchBox(props) {
 
   const handleKeyPress = (event) => {
      //it triggers by pressing the enter key
+     console.log("SEARCH EVENT", event.keyCode)
      if (event.keyCode === 13) {
       submitHandler();
     }
@@ -28,6 +29,7 @@ export default function SearchBox(props) {
   return (
 
     <div className="searchBox">
+      <p>Type in movie title and hit Enter</p>
       <form onSubmit={submitHandler}>
         <label></label>
         <input name="searchBox" placeholder="Movie to search..." type="text" onChange={changeHandler} onKeyPress={handleKeyPress}></input>
