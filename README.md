@@ -1,5 +1,5 @@
 # Shoppies Awards App
-The Shoppies Awards app allows cinema savvy users to search for their favorite movies, nominate them for a Shoppie award and manage their nominations list. It was bootstrapped with creat-react-app. 
+The Shoppies Awards app allows cinema savvy users to search for their favorite movies, nominate them for a Shoppie award and manage their nominations list. It was bootstrapped with creat-react-app. It is hosted at: https://sarairving.github.io/shoppies/.
 
 ## Project Requirements
 - Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
