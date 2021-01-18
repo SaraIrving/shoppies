@@ -112,6 +112,8 @@ footer {
   min-height: 200px;
   min-width: 12em;
   /* margin-right: 3em; */
+  background-color: #cccccc;
+background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
 
 .nominationsList {
@@ -119,6 +121,8 @@ footer {
   width: 40%;
   min-height: 200px;
   min-width: 12em;
+  background-color: #c9a208;
+background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
 }
 
 #nomListDnd {
@@ -157,6 +161,7 @@ footer {
   margin: 1em;
   /* padding: 0.5em; */
   /* min-height: 3em; */
+  background-color: white
 }
 
 .memeWrapper {
