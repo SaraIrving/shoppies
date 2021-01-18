@@ -9,7 +9,7 @@ export default function useAppData() {
                                       searchValue: '',
                                       resultsArray: [],
                                       nominationsArray: [],
-                                      enableDragDrop: false
+                                      enableDragDrop: true
                                     });
 
   useEffect(() => {
