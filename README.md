@@ -21,7 +21,7 @@ The Shoppies Awards app allows cinema savvy users to search for their favorite m
 !["Memes!"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/memes.png)
 
 ### Nominate Buttons Are Disabled Once A Title Is Nominated
-!["Nominate!"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/disableNominate.png
+!["Nominate!"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/disableNominate.png)
 
 ### Alert Once Five Titles Have Been Nominated
 !["Alert!"](https://raw.githubusercontent.com/SaraIrving/shoppies/master/public/images/alert.png)
