@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/shoppies/static/css/main.e250e3eb.chunk.css",
+    "main.js": "/shoppies/static/js/main.b8930d53.chunk.js",
+    "main.js.map": "/shoppies/static/js/main.b8930d53.chunk.js.map",
+    "runtime-main.js": "/shoppies/static/js/runtime-main.79e3379f.js",
+    "runtime-main.js.map": "/shoppies/static/js/runtime-main.79e3379f.js.map",
+    "static/js/2.e2122f7b.chunk.js": "/shoppies/static/js/2.e2122f7b.chunk.js",
+    "static/js/2.e2122f7b.chunk.js.map": "/shoppies/static/js/2.e2122f7b.chunk.js.map",
+    "static/js/3.1d23beba.chunk.js": "/shoppies/static/js/3.1d23beba.chunk.js",
+    "static/js/3.1d23beba.chunk.js.map": "/shoppies/static/js/3.1d23beba.chunk.js.map",
+    "index.html": "/shoppies/index.html",
+    "static/css/main.e250e3eb.chunk.css.map": "/shoppies/static/css/main.e250e3eb.chunk.css.map",
+    "static/js/2.e2122f7b.chunk.js.LICENSE.txt": "/shoppies/static/js/2.e2122f7b.chunk.js.LICENSE.txt",
+    "static/media/cryingCat.f07f41a3.png": "/shoppies/static/media/cryingCat.f07f41a3.png",
+    "static/media/drakeNo.2b820dc3.png": "/shoppies/static/media/drakeNo.2b820dc3.png",
+    "static/media/drakeYes.b93d5b00.png": "/shoppies/static/media/drakeYes.b93d5b00.png",
+    "static/media/grumpyCat.5fe918b2.png": "/shoppies/static/media/grumpyCat.5fe918b2.png",
+    "static/media/logo.6ce24c58.svg": "/shoppies/static/media/logo.6ce24c58.svg",
+    "static/media/successKid.ad052a3e.png": "/shoppies/static/media/successKid.ad052a3e.png",
+    "static/media/yelling.b8a1837c.png": "/shoppies/static/media/yelling.b8a1837c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.79e3379f.js",
+    "static/js/2.e2122f7b.chunk.js",
+    "static/css/main.e250e3eb.chunk.css",
+    "static/js/main.b8930d53.chunk.js"
+  ]
+}
