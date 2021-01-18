@@ -91,9 +91,9 @@ function App() {
       <div className="appBody">
         <SearchBox state={state} setState={setState}></SearchBox>
         <div className="radioWrapper">
-          <input id="dndRadio" type="radio" value="DNDRadio" checked={state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
+          <input id="dndRadio" type="radio" value="DNDRadio" checked={!state.enableDragDrop} readOnly={true} onClick={event => setState(prev => ({...prev, enableDragDrop: !prev.enableDragDrop}))}></input>
           <label for="dndRadio">
-            <span className="radioSpan">Enable Drag and drop feature to rank movies in nominations list</span>
+            <span className="radioSpan">Enable "meme free" mode for a boring by the specifications app</span>
           </label>
         </div>
         {state.nominationsArray.length >= 5 && <Alert></Alert>}
