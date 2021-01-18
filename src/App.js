@@ -107,12 +107,16 @@ function App() {
 
 
         {!state.enableDragDrop && <div className="resultNomWrapper">
-                                    <ResultsList state={state} setState={setState}></ResultsList>
-                                    <NominationsList state={state} setState={setState}></NominationsList>
+                                      <ResultsList state={state} setState={setState}></ResultsList>
+                                    
+                                      <NominationsList state={state} setState={setState}></NominationsList>
+                                  
                                   </div>}
         {state.enableDragDrop && <DragDropContext onDragEnd={handleOnDragEnd}>
                                     <div className="resultNomWrapper">
+                                    
                                       <ResultsList state={state} setState={setState} droppableId="results" listItemType="results"></ResultsList>
+                
                                       <NominationsList state={state} setState={setState} droppableId="nominations" listItemType="nominations"></NominationsList>
                                     </div>
                                   </DragDropContext>}
