@@ -33,8 +33,9 @@ export default function(props) {
 
   return (
     <div className="resultsList">
+      <h2>Search Results</h2>
       <p className="resultsInstructions">Click "Nominate" to add a movie to the list of contenders for a Shoppie Award!</p>
-      {(props.state.resultsArray !== 0) && <div>
+      {props.state.resultsArray !== 0 && <div>
       {props.state.resultsArray.map((movie, index) => {
         const movieObj = {
                         title: movie.Title,
