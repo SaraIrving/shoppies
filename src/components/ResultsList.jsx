@@ -33,6 +33,7 @@ export default function(props) {
 
   return (
     <div className="resultsList">
+      <p className="resultsInstructions">Click "Nominate" to add a movie to the list of contenders for a Shoppie Award!</p>
       {(props.state.resultsArray !== 0 && !props.state.enableDragDrop) && <div>
       {props.state.resultsArray.map((movie, index) => {
         const movieObj = {
@@ -72,7 +73,9 @@ export default function(props) {
       )}
       
       </Droppable>}
+
     </div> 
+    
   
   );
 
